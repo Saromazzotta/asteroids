@@ -30,3 +30,11 @@ class CircleShape(pygame.sprite.Sprite):
 
         if keys[pygame.K_s]:
             self.move(-dt)
+
+    def collision(self, shape):
+        # Calculate distance between the two positions
+        distance = self.position.distance_to(shape.position)
+        # Compare with sum of radii
+        if distance <= (self.radius + shape.radius):
+            return True
+        return False
