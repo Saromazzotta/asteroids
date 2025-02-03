@@ -17,19 +17,7 @@ class CircleShape(pygame.sprite.Sprite):
         pygame.draw.polygon(screen, "white", self.triangle(), 2)
 
     def update(self, dt):
-        keys = pygame.key.get_pressed()
-
-        if keys[pygame.K_a]:
-            self.rotate(-dt)
-
-        if keys[pygame.K_d]:
-            self.rotate(dt)
-
-        if keys[pygame.K_w]:
-            self.move(dt)
-
-        if keys[pygame.K_s]:
-            self.move(-dt)
+        pass 
 
     def collision(self, shape):
         # Calculate distance between the two positions
